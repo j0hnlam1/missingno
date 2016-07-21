@@ -5,31 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<style>
+	  html, body {
+	    height: 100%;
+	    margin: 0;
+	    padding: 0;
+	  }
+	  #map {
+	    height: 100%;
+	  }
+	</style>
 </head>
 <body>
-
-<%= yield %>
-
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
     <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
@@ -74,8 +63,12 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=<enter key here>&callback=initMap">
     </script>
-  </body>
-</html>
+<%= yield %>
+
+
+
+
+
 
 </body>
 </html>

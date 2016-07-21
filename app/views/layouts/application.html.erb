@@ -14,12 +14,12 @@
 	    padding: 0;
 	  }
 	  #map {
-	    height: 100%;
+	    height: 50%;
 	  }
 	</style>
 </head>
 <body>
-    <div id="map"></div>
+    
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -28,7 +28,7 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat: 37.279518, lng: -121.867905},
           zoom: 6
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
@@ -53,15 +53,15 @@
         }
       }
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
+      // function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+      //   infoWindow.setPosition(pos);
+      //   infoWindow.setContent(browserHasGeolocation ?
+      //                         'Error: The Geolocation service failed.' :
+      //                         'Error: Your browser doesn\'t support geolocation.');
+      // }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<enter key here>&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
     </script>
 <%= yield %>
 

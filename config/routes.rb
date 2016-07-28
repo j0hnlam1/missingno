@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root 'maps#index'
+  root 'static_pages#index'
+  get 'static_pages/index'
+
+
   get 'maps/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

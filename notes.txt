@@ -1,0 +1,3 @@
+notes
+1--changing from sqllite to postgres 
+	http://stackoverflow.com/questions/6710654/change-from-sqlite-to-postgresql-in-a-fresh-rails-project
